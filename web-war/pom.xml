@@ -7,8 +7,8 @@
 	<artifactId>web-war</artifactId>
 
 	<parent>
-		<groupId>com.github.bordertech.sample.app</groupId>
-		<artifactId>sample-app-parent</artifactId>
+		<groupId>com.github.bordertech.xenat.app</groupId>
+		<artifactId>xenat-app-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -18,7 +18,7 @@
 	<dependencies>
 		<!-- Web BOM -->
 		<dependency>
-			<groupId>com.github.bordertech.sample.app</groupId>
+			<groupId>com.github.bordertech.xenat.app</groupId>
 			<artifactId>web-bom</artifactId>
 			<version>${project.version}</version>
 		</dependency>

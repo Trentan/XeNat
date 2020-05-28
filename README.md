@@ -1,15 +1,16 @@
-# Sample Application
+FIXME this is to be improved before open sourced..
+# Xenat Application
 
-Sample application demonstrates how a project can be structured with RESTful services and a Web UI.
+Xenat application demonstrates how a project can be structured with RESTful services and a Web UI.
 
 This project can be cloned as a template.
 
 ## Status
-[![Build Status](https://travis-ci.com/BorderTech/sample-app.svg?branch=master)](https://travis-ci.com/BorderTech/sample-app)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bordertech-sample-app&metric=alert_status)](https://sonarcloud.io/dashboard?id=bordertech-sample-app)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=bordertech-sample-app&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=bordertech-sample-app)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=bordertech-sample-app&metric=coverage)](https://sonarcloud.io/dashboard?id=bordertech-sample-app)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d637639668404d609802750a9e16c155)](https://www.codacy.com/gh/BorderTech/sample-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BorderTech/sample-app&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.com/BorderTech/xenat-app.svg?branch=master)](https://travis-ci.com/BorderTech/xenat-app)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bordertech-xenat-app&metric=alert_status)](https://sonarcloud.io/dashboard?id=bordertech-xenat-app)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=bordertech-xenat-app&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=bordertech-xenat-app)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=bordertech-xenat-app&metric=coverage)](https://sonarcloud.io/dashboard?id=bordertech-xenat-app)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d637639668404d609802750a9e16c155)](https://www.codacy.com/gh/BorderTech/xenat-app?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BorderTech/xenat-app&amp;utm_campaign=Badge_Grade)
 
 ## Build and Run
 
@@ -17,7 +18,7 @@ This project can be cloned as a template.
 
 Follow these commands to fetch the source and build:
 
-1. git clone https://github.com/BorderTech/sample-app.git my-dir (first time only)
+1. git clone https://github.com/BorderTech/xenat-app.git my-dir (first time only)
 2. cd my-dir
 
 #### Quick build
@@ -131,7 +132,7 @@ mvn install -Dapp.warName='${project.artifactId}' -Dweb.warName='${project.artif
 
 ### Smoke tests
 
-Sample command lines for running smoke tests.
+Xenat command lines for running smoke tests.
 
 #### API Test
 

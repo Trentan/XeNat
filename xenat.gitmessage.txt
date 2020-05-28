@@ -1,0 +1,15 @@
+XENAT- : Subject line (keep below 50 chars) (see examples)
+#
+# Lines starting with '#' will be ignored. Replace details below.
+#
+Detailed description of change. Be as detailed as you want and may span
+over many lines. It is advisable to limit line length to 72 chars.
+# Additional optional tag specific information
+#
+# JIRA-ISSUE-TAG #comment Why is this change required?
+# JIRA-ISSUE-TAG #comment How does this change address the issue?
+# JIRA-ISSUE-TAG #comment What are the side effects of the change?
+# How long did the work in this commit take? 1d or 4h etc.
+# JIRA-ISSUE-TAG #time 1w
+# DO you need to change the Ticket status?
+# JIRA-ISSUE-TAG #done|#in-progress

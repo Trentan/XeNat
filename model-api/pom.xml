@@ -7,8 +7,8 @@
 	<artifactId>model-api</artifactId>
 
 	<parent>
-		<groupId>com.github.bordertech.sample.app</groupId>
-		<artifactId>sample-app-parent</artifactId>
+		<groupId>com.github.bordertech.xenat.app</groupId>
+		<artifactId>xenat-app-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -30,12 +30,30 @@
 		</dependency>
 		<!-- Model BDD -->
 		<dependency>
-			<groupId>com.github.bordertech.sample.app</groupId>
+			<groupId>com.github.bordertech.xenat.app</groupId>
 			<artifactId>model-bdd</artifactId>
 			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>com.github.bordertech.restfriends</groupId>
+			<artifactId>restfriends-envelope</artifactId>
+		</dependency>
+		<!-- Bean Validation -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+		<!-- Jackson binding annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<!-- Swagger Annotations -->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>

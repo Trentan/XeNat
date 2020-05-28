@@ -7,8 +7,8 @@
 	<artifactId>web-bom</artifactId>
 
 	<parent>
-		<groupId>com.github.bordertech.sample.app</groupId>
-		<artifactId>sample-app-parent</artifactId>
+		<groupId>com.github.bordertech.xenat.app</groupId>
+		<artifactId>xenat-app-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -18,20 +18,20 @@
 	<dependencies>
 		<!-- Web application -->
 		<dependency>
-			<groupId>com.github.bordertech.sample.app</groupId>
+			<groupId>com.github.bordertech.xenat.app</groupId>
 			<artifactId>web-ui</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
 		<!-- REST Client Services -->
 		<dependency>
-			<groupId>com.github.bordertech.sample.app</groupId>
-			<artifactId>rest-client-model-impl</artifactId>
+			<groupId>com.github.bordertech.xenat.app</groupId>
+			<artifactId>rest-model-impl</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<!-- MOCK Implementation (Usually only used in LDE or Unit Tests)-->
 		<dependency>
-			<groupId>com.github.bordertech.sample.app</groupId>
+			<groupId>com.github.bordertech.xenat.app</groupId>
 			<artifactId>model-mock-impl</artifactId>
 			<version>${project.version}</version>
 		</dependency>

@@ -6,8 +6,8 @@
 	<artifactId>rest-api</artifactId>
 
 	<parent>
-		<groupId>com.github.bordertech.sample.app</groupId>
-		<artifactId>sample-app-parent</artifactId>
+		<groupId>com.github.bordertech.xenat.app</groupId>
+		<artifactId>xenat-app-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
@@ -18,7 +18,7 @@
 
 		<!-- Model -->
 		<dependency>
-			<groupId>com.github.bordertech.sample.app</groupId>
+			<groupId>com.github.bordertech.xenat.app</groupId>
 			<artifactId>model-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>
@@ -32,7 +32,7 @@
 		<!-- REST Interface -->
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
-			<artifactId>jsr311-api</artifactId>
+			<artifactId>javax.ws.rs-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
@@ -80,7 +80,7 @@
 					<apiSources>
 						<apisource>
 							<locations>
-								<location>com.sample.app.rest.api.v1</location>
+								<location>com.xenat.app.rest.api.v1</location>
 							</locations>
 							<schemes>
 								<scheme>http</scheme>
