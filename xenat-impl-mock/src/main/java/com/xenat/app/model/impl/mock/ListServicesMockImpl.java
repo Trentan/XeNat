@@ -1,6 +1,6 @@
-package com.xenat.app.model.impl;
+package com.xenat.app.model.impl.mock;
 
-import com.xenat.app.exception.ServiceException;
+import com.xenat.app.model.list.ListCriteria;
 import com.xenat.app.model.list.ListDetail;
 import com.xenat.app.service.list.ListResponse;
 import com.xenat.app.service.list.ListServices;
@@ -25,7 +25,7 @@ public class ListServicesMockImpl implements ListServices {
 		}
 	}
 
-	private static ListDetail createDetail(Calendar cal, int idx, String module, String dbid) {
+	private static ListDetail createDetail(Calendar cal, int idx, String module, String vers) {
 		ListDetail item = new ListDetail();
 		item.setLibrary("PR" + 0 + idx);
 		item.setObject(module + idx);
@@ -35,25 +35,25 @@ public class ListServicesMockImpl implements ListServices {
 		item.setSrcProgMode("S");
 		item.setSrcSize(100 + idx);
 		item.setSrcType("P");
-		item.setSrcVersion(dbid + "." + idx);
+		item.setSrcVersion(vers + "." + idx);
 		item.setSrcUser("TEST0" + idx);
 
 		item.setObjDateTime(cal.getTime());
 		item.setObjGdaName("GDA" + idx);
 		item.setObjSize(100 + idx);
 		item.setObjType("P");
-		item.setObjVersion(dbid + "." + idx);
+		item.setObjVersion(vers + "." + idx);
 		item.setObjUser("TEST0" + idx);
 		return item;
 	}
 
 	@Override
-	public ListResponse retrieveListDetails(String module, String dbid) throws ServiceException {
+	public ListResponse retrieveListDetails(ListCriteria listCriteria) {
 		ListResponse resp = new ListResponse();
-		if (module.equals("*")) {
+		if (listCriteria.getModuleFrom().equals("*")) {
 			resp.setData(MOCK_DETAILS);
 		} else {
-			ListDetail newDetail = createDetail(Calendar.getInstance(), MOCK_DETAILS.size()+1, module, dbid);
+			ListDetail newDetail = createDetail(Calendar.getInstance(), MOCK_DETAILS.size()+1, listCriteria.getModuleFrom(), "9");
 			MOCK_DETAILS.add(newDetail);
 			resp.setData(new ArrayList<ListDetail>() {{
 				add(newDetail);

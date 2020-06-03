@@ -1,4 +1,4 @@
-package com.xenat.app.model.impl;
+package com.xenat.app.model.impl.mock;
 
 //import com.xenat.app.model.client.AddressDetail;
 //import com.xenat.app.model.client.ClientDetail;

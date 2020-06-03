@@ -1,7 +1,9 @@
 package com.xenat.app.rest.client.v1;
 
-import com.xenat.app.exception.ServiceException;
+import com.xenat.app.model.list.ListCriteria;
 import com.xenat.app.rest.client.jersey.v1.invoker.ApiException;
+import com.xenat.app.rest.client.util.RestAdapterUtil;
+import com.xenat.app.service.XenatBusinessException;
 import com.xenat.app.service.list.ListResponse;
 import com.xenat.app.service.list.ListServices;
 
@@ -11,9 +13,16 @@ import com.xenat.app.service.list.ListServices;
 public class ListServicesRestClientImpl extends AbstractRestClient implements ListServices {
 
 	@Override
-	public ListResponse retrieveListDetails(String module, String dbid) throws ServiceException {
+	public ListResponse retrieveListDetails(ListCriteria listCriteria) throws XenatBusinessException {
 		try {
-			return getApi().retrieveListDetails(module, dbid);
+			return getApi().retrieveListDetails(
+					listCriteria.getModuleFrom(),
+					listCriteria.getModuleTo(),
+					RestAdapterUtil.convertDateToLocalDate(listCriteria.getSourceFromTs()),
+					RestAdapterUtil.convertDateToLocalDate(listCriteria.getSourceToTs()),
+					listCriteria.getLibrary(),
+					listCriteria.getUserId());
+
 		} catch (ApiException e) {
 			throw handleException(e);
 		}

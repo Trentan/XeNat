@@ -1,4 +1,4 @@
-package com.xenat.app.model.bdd.runner;
+package com.xenat.app.model.impl.bdd.runner;
 
 //import com.xenat.app.model.impl.MockDataUtil;
 

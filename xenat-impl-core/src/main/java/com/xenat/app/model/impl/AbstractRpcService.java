@@ -1,10 +1,11 @@
+package com.xenat.app.model.impl;
+
+import com.xenat.app.model.impl.util.Constants;
 import com.xenat.app.service.XenatBusinessException;
 import com.xenat.app.service.XenatSystemException;
 import com.xenat.app.service.XenatUnauthorisedException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import util.BrokerUtil;
-import util.Constants;
 
 /**
  * Abstract RPC Service.
@@ -76,9 +77,9 @@ public abstract class AbstractRpcService {
 	/**
 	 * @return the profile transaction id
 	 */
-	protected String getPtid() {
-		return BrokerUtil.getProfileTransactionId();
-	}
+//	protected String getPtid() {
+//		return BrokerUtil.getProfileTransactionId();
+//	} // FIXME Add PTID
 
 	/**
 	 * @return the audit log name

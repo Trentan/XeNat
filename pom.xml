@@ -279,7 +279,6 @@
 	</dependencyManagement>
 
 	<modules>
-
 		<module>model-api</module>
 		<module>model-bdd</module>
 		<module>rest-api</module>

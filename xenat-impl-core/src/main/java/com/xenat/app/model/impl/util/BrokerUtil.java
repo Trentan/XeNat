@@ -1,5 +1,6 @@
-package util;
+package com.xenat.app.model.impl.util;
 
+import com.github.bordertech.config.Config;
 import com.google.gson.Gson;
 import com.softwareag.entirex.aci.Broker;
 import com.softwareag.entirex.aci.BrokerException;
@@ -34,23 +35,24 @@ public final class BrokerUtil {
 	 */
 	private static final Log LOG = LogFactory.getLog(BrokerUtil.class);
 
+
 	/**
 	 * Broker ID.
 	 */
-	private static final String BROKER_ID = Parameters.getInstance()
-			.getInteger("au.gov.immi.xenat.entirex.brokerserver"); //FIXME Need to default in here and also example in properties
+	private static final String XENAT_BROKER_ID = "xenat.broker.id";
+	private static final String BROKER_ID = Config.getInstance().getString(XENAT_BROKER_ID, "mvsimda:18024");
 
 	/**
 	 * Broker Server.
 	 */
-	private static final String BROKER_SERVER = Parameters.getInstance()
-			.getInteger("au.gov.immi.xenat.entirex.brokerserver");  //FIXME Need to default in here and also example in properties
+	private static final String XENAT_BROKER_SERVER = "xenat.broker.server";
+	private static final String BROKER_SERVER = Config.getInstance().getString(XENAT_BROKER_SERVER, "RPC/DEV/CALLNAT");
 
 	/**
-	 * Broker poolsize.
+	 * User Id.
 	 */
-	private static final Integer BROKER_POOLSIZE = Parameters.getInstance()
-			.getInteger("au.gov.immi.xenat.entirex.poolsize", null);  //FIXME Need to default in here and also example in properties
+	private static final String XENAT_USER_ID = "xenat.userid";
+	private static final String USER_ID = Config.getInstance().getString(XENAT_USER_ID, null);
 
 	/**
 	 * Don't allow external instantiation of this class.
@@ -59,21 +61,21 @@ public final class BrokerUtil {
 		// Do nothing
 	}
 
-	/**
-	 * @return the current profile transaction id
-	 */
-	public static String getProfileTransactionId() {
-		AppContext appContext = AppContextManager.getCurrent();
-		if (appContext == null) {
-			return null;
-		}
-		InvocationContext invContext = appContext.getInvocationContext();
-		if (invContext == null) {
-			return null;
-		}
-
-		return invContext.getTransactionId();
-	}
+//	/**
+//	 * @return the current profile transaction id
+//	 */
+//	public static String getProfileTransactionId() { // FIXME To add Profile transaction ID
+//		AppContext appContext = AppContextManager.getCurrent();
+//		if (appContext == null) {
+//			return null;
+//		}
+//		InvocationContext invContext = appContext.getInvocationContext();
+//		if (invContext == null) {
+//			return null;
+//		}
+//
+//		return invContext.getTransactionId();
+//	}
 
 	/**
 	 * Trim the string. Empty is treated as null.
@@ -399,19 +401,21 @@ public final class BrokerUtil {
 	 * @return the current user id in the context
 	 */
 	public static String getUserId() {
-		AppContext appContext = AppContextManager.getCurrent(); may need to set a rest profile filter =/
-		if (appContext == null) {
-			throw new XenatSystemException("No app context set.");
-		}
-		SessionContext sessionContext = appContext.getSessionContext();
-		if (sessionContext == null) {
-			throw new XenatSystemException("No session context set.");
-		}
-		String userId = sessionContext.getUsername();
-		if (userId == null) {
+
+
+//		AppContext appContext = AppContextManager.getCurrent(); FIXME may need to set a rest profile filter =/
+//		if (appContext == null) {
+//			throw new XenatSystemException("No app context set.");
+//		}
+//		SessionContext sessionContext = appContext.getSessionContext();
+//		if (sessionContext == null) {
+//			throw new XenatSystemException("No session context set.");
+//		}
+//		String userId = sessionContext.getUsername();
+		if (USER_ID == null) {
 			throw new XenatSystemException("No user id set.");
 		}
-		return userId;
+		return USER_ID;
 	}
 
 	/**

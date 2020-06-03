@@ -75,7 +75,7 @@
 		<!-- MOCK Services -->
 		<dependency>
 			<groupId>com.github.bordertech.xenat.app</groupId>
-			<artifactId>model-mock-impl</artifactId>
+			<artifactId>xenat-impl-mock</artifactId>
 			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>

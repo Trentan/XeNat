@@ -15,6 +15,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 /**
  * Xenat REST Resource call a backing service implementation.
@@ -22,8 +23,8 @@ import javax.ws.rs.core.MediaType;
 @Api(value = "ListServices")
 @Path(value = "v1")
 @ApiResponses(value = {
-	@ApiResponse(code = 400, message = "Invalid request", response = ErrorResponse.class),
-	@ApiResponse(code = 500, message = "Internal error", response = ErrorResponse.class)
+		@ApiResponse(code = 400, message = "Invalid request", response = ErrorResponse.class),
+		@ApiResponse(code = 500, message = "Internal error", response = ErrorResponse.class)
 })
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
@@ -39,7 +40,10 @@ public interface ListServicesResource {
 	@GET
 	@Path("list")
 	@ApiOperation(value = "Retrieve module details")
-	ListResponse retrieveListDetails(@ApiParam(value = "Module name") @QueryParam("module") String module,
-	                                 @ApiParam(value = "Database ID") @QueryParam("dbid") String dbid) throws RestBusinessException;
-
+	ListResponse retrieveListDetails(@ApiParam(value = "Module from") @QueryParam("moduleFrom") String moduleFrom,
+	                                 @ApiParam(value = "Module to") @QueryParam("moduleTo") String moduleTo,
+	                                 @ApiParam(value = "Source Date From", format = "date") @QueryParam("dateFrom") String dateFrom,
+	                                 @ApiParam(value = "Source Date To", format = "date") @QueryParam("dateTo") String dateTo,
+	                                 @ApiParam(value = "Libraries") @QueryParam("libs") List<String> libs,
+	                                 @ApiParam(value = "Users") @QueryParam("users") List<String> users) throws RestBusinessException;
 }

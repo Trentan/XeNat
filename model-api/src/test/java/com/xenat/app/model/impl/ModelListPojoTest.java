@@ -1,4 +1,4 @@
-package com.xenat.app.model;
+package com.xenat.app.model.impl;
 
 import com.openpojo.reflection.filters.FilterPackageInfo;
 import com.openpojo.validation.Validator;

@@ -1,4 +1,4 @@
-package com.xenat.app.model.bdd.steps;
+package com.xenat.app.model.impl.bdd.steps;
 
 /**
  * Retrieve client steps.

@@ -1,4 +1,4 @@
-package util;
+package com.xenat.app.model.impl.util;
 
 /**
  * Constants used by the service implementations.

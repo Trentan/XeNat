@@ -126,7 +126,7 @@
 						</goals>
 						<configuration>
 							<importMappings>
-								<importMapping>ListSearchCriteria=com.xenat.app.service.list.ListSearchCriteria</importMapping>
+								<importMapping>ListCriteria=com.xenat.app.model.list.ListCriteria</importMapping>
 								<importMapping>ListResponse=com.xenat.app.service.list.ListResponse</importMapping>
 
 								<importMapping>ErrorDetail=com.github.bordertech.restfriends.envelope.ErrorDetail</importMapping>

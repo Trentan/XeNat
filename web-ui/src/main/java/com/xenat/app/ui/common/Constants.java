@@ -25,6 +25,10 @@ public final class Constants {
 	 */
 	public static final int GAP_LARGE = 12;
 
+	/**
+	 * Default Half (50).
+	 */
+	public static final int HALF = 50;
 
 	/**
 	 * North margin.

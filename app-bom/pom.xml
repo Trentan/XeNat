@@ -36,7 +36,13 @@
 		<!-- MOCK Implementation -->
 		<dependency>
 			<groupId>com.github.bordertech.xenat.app</groupId>
-			<artifactId>model-mock-impl</artifactId>
+			<artifactId>xenat-impl-mock</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- Core impl (ie RPC) -->
+		<dependency>
+			<groupId>com.github.bordertech.xenat.app</groupId>
+			<artifactId>xenat-impl-core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
