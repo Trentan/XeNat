@@ -40,7 +40,7 @@
 	<dependencies>
 		<!-- BOM -->
 		<dependency>
-			<groupId>com.github.bordertech.sample.app</groupId>
+			<groupId>com.github.bordertech.xenat.app</groupId>
 			<artifactId>app-bom</artifactId>
 			<version>${project.version}</version>
 		</dependency>
