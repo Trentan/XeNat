@@ -149,11 +149,11 @@ public class ListController extends WSection implements MessageContainer {
 		listCriteria.setSourceToTs(dtSourceToTs.getDate());
 		String[] libs = txtLibraries.getTextInputs();
 		if (libs != null) {
-			listCriteria.getLibrary().addAll(Arrays.asList(libs));
+			listCriteria.setLibrary(Arrays.asList(libs));
 		}
 		String[] users = txtUserIds.getTextInputs();
 		if (users != null) {
-			listCriteria.getUserId().addAll(Arrays.asList(users));
+			listCriteria.setUserId(Arrays.asList(users));
 		}
 		return listCriteria;
 	}
